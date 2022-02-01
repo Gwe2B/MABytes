@@ -1,0 +1,30 @@
+{
+    "author": [
+        {
+            "name": "Calpena Marion",
+            "role": "Designer & chief of project"
+        },
+        {
+            "name": "Ragiot Hugo",
+            "role": "Backend Developer"
+        },
+        {
+            "name": "L'haridon Clément",
+            "role": "Frontend Developer"
+        },
+        {
+            "name": "Guiraud Gwenaël",
+            "role": "Backend Developer"
+        }
+    ],
+    "name": "mabytes-corp/mabytes",
+    "type": "project",
+    "require": {
+        "twig/twig": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
