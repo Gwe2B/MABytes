@@ -1,5 +1,7 @@
 <?php
+ini_set('display_errors', 1); // DEV -> 1, PROD -> 0
 
+/* -------------------------- Constants definition -------------------------- */
 define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('VIEWS_DIR', ROOT.'views'.DIRECTORY_SEPARATOR);
 
@@ -14,9 +16,15 @@ define(
 
 require ROOT."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-$twigLoader = new Twig\Loader\FilesystemLoader(VIEWS_DIR);
-$twigEnvironment = new Twig\Environment($twigLoader, TWIG_SETTINGS);
+/* -------------------------------------------------------------------------- */
+/*                            Router Initialisation                           */
+/* -------------------------------------------------------------------------- */
+$router = new App\Router\Router(
+    (isset($_GET['url']) && !empty($_GET['url'])) ? $_GET['url'] : '/'
+);
 
-$template = $twigEnvironment->load('acceuil.twig');
+/* ------------------------------- GET routes ------------------------------- */
+$router->get('/', 'Index#show');
 
-echo $template->render(array('text' => 'Hello World!!'));
+// Running the router
+$router->run();
