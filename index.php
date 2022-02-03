@@ -24,7 +24,11 @@ $router = new App\Router\Router(
 );
 
 /* ------------------------------- GET routes ------------------------------- */
-$router->get('/', 'Index#show');
+$router->get('/carteinterractive', 'CarteInterractive#show');
+$router->get('/information', 'Information#show');
+$router->get('/formulaire', 'Formulaire#show');
+$router->get('/accueil', 'Index#show');
+
 
 // Running the router
 $router->run();

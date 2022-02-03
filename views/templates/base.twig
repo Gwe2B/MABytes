@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        {% block mainContent %}{% endblock %}
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="dist\Semantic-UI\semantic.min.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="dist\Semantic-UI\semantic.min.js"></script>
+
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body>
+		<main>
+			<div class="ui secondary pointing menu" style="background:#92b474;">
+				<img class="ui tiny image" src="static\img\logo.png">
+				<div class="right menu" class="ui compact menu">
+					<a class="item" href="accueil">Accueil</a>
+					<a class="item" href="information">Informations</a>
+					<div class="ui simple dropdown item" class="item" style="background:#92b474;">
+						<i class="dropdown icon"></i>
+						<div class="menu" style="background:#92b474;">
+							<a class="item" href="information#faune">Faune</a>
+							<a class="item">Flore</a>
+							<a class="item">Maritime</a>
+							<a class="item">Gastronomie</a>
+							<a class="item">Randonné</a>
+							<a class="item">Lieux</a>
+						</div>
+					</div>
+					<a class="item" href="carteinterractive">Carte Interractive</a>
+					<a class="item" href="formulaire">Formulaire</a>
+				</div>
+			</div>
+			<div>
+				{% block mainContent %}{% endblock %}
+			</div>
+		</main>
+		<script>
+			// 1 au chargement de la page
+            window.addEventListener('DOMContentLoaded', (event) => {
+                // 2 je récupere l'url
+                let path = window.location.href
+                path = path.substring(path.lastIndexOf('/') + 1)
+                path = path.split("#")[0]
+                // 3 je compare l'url à mes href
+                // 4 j'ajoute la classe à l'element qui correspond
+                if(path == "accueil"){
+                    document.querySelector('.item[href="accueil"]').classList.add("active");
+                }else if(path == "information"){
+                    document.querySelector('.item[href="information"]').classList.add("active");
+                }else if(path == "carteinterractive"){
+                    document.querySelector('.item[href="carteinterractive"]').classList.add("active");
+                }else if(path == "formulaire"){
+                    document.querySelector('.item[href="formulaire"]').classList.add("active");
+                }
+            });
+		</script>
+	</body>
 </html>

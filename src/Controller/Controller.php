@@ -10,7 +10,7 @@ abstract class Controller {
         $this->twigEnvironment = new \Twig\Environment($twigLoader, TWIG_SETTINGS);
     }
 
-    protected function render(string $viewName = 'index.twig', array $pageContent = array()): void {
+    protected function render(string $viewName, array $pageContent = array()): void {
         echo $this->twigEnvironment->render($viewName, $pageContent);
     }
 }
