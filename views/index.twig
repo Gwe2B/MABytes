@@ -17,6 +17,9 @@
 
         img {
             vertical-align: middle;
+            filter: brightness(.75);
+            object-fit: cover;
+
         }
 
         /* Slideshow container */
@@ -70,20 +73,10 @@
             font-size: 15px;
             padding: 8px 12px;
             position: absolute;
-            bottom: 8px;
+            top: 8px;
             width: 100%;
-            text-align: center;
-
-            display: none;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
+            font-family: New York;
+            
         }
 
         /* The dots/bullets/indicators */
@@ -97,10 +90,10 @@
             cursor: pointer;
             height: 15px;
             width: 15px;
-            /* margin: 0 2px; */
+            margin: 0 2px;
             background-color: #bbb;
             border-radius: 50%;
-            /* display: inline-block; */
+            display: inline-block;
             transition: background-color 0.6s ease;
         }
 
@@ -146,6 +139,17 @@
                 font-size: 11px
             }
         }
+        .rectangleRight{
+            float: right;
+            width: 45%;
+            height:85vh;
+            background:#c9beac;
+            /* z-index: 1; */
+        } 
+        .rectangleLeft{
+            float: left;
+            width: 45%;
+        } 
     </style>
 </head>
 
@@ -154,21 +158,81 @@
     <div class="slideshow-container">
 
         <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="static\img\fond3.png" style="width:100%">
-            <div class="text">Caption Text</div>
+            <img src="static\img\fond3.jpg" style="width:100%">
+                <div class="text" >
+                    <div class="rectangleLeft">
+                        <h1>Définition</h1>
+                        <p>
+                            Un parc naturel régional est un territoire rural, reconnu au niveau national 
+                            pour sa forte valeur patrimoniale, paysagère et sa fragilité, qui s’organise autour 
+                            d’un projet concerté de développement durable fondé sur la protection et la valorisation 
+                            de son patrimoine. Un parc naturel régional a pour vocation de protéger et valoriser le 
+                            patrimoine naturel, culturel et humain de son territoire en mettant en œuvre une politique 
+                            innovante d’aménagement et de développement économique, social et culturel respectueuse de 
+                            l’environnement. L’initiative de la création d’un Parc naturel régional est de la compétence
+                            du conseil régional. Le projet est élaboré dans la concertation la plus large entre toutes 
+                            les forces vivres du territoire. L’accord qui s’en dégage est mis en forme dans un contrat 
+                            signé par toutes les collectivités : la charte. Le premier 
+                            ministre classe alors le territoire en « Parc naturel régional » pour une durée de 15 ans.
+                        </p>
+                        <h1>Un territoire reconnu</h1>
+                        <p>
+                            par un classement national…
+                            Le PnrC, territoire classé pour la première fois en 1972, et régi par une charte 
+                            renouvelée tous les 15 ans, recouvre aujourd’hui plus de la moitié de l’île avec une superficie de 450 000 hectares pour environ 60 000 habitants.
+                            Institutionnalisé sous forme d’un syndicat mixte, il associe la Collectivité de
+                            Corse et les 178 communes de son territoire. À cheval sur la grande dorsale montagneuse qui prend l’île en écharpe du nord-ouest au sud-est et qui culmine au 
+                            Monte Cintu (2 706m.), le Parc de Corse–Parcu di Corsica est avant tout un parc rural, villageois et montagnard, même s’il comprend aussi des façades maritimes 
+                            avec les côtes occidentales grandioses et sauvage du golfe de Porto-Girolata et un échantillon des étangs lagunaires du littoral oriental.
+                            Son vaste territoire englobe les plus hauts sommets de l’île et 
+                            une multitude de vallée compartimentées 
+                            formant des micro-régions, anciennement appelées Piève.      
+                        </p>  
+                    </div>
+                    <div class="rectangleRight">
+                        <h1 style="text-align: center;">Recommandation</h1>
+                    </div>    
+                </div>
+                
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="static\img\fond1.png" style="width:100%">
-            <div class="text">Caption Two</div>
+            <img src="static\img\fond1.jpg" style="width:100%">
+                <div class="text">
+                    <div class="rectangleLeft">
+                        <h1>L'origine...</h1>
+                        <h2>Territoire au patrimoine naturel culturel riche et original</h2>
+                        <p>
+                            La Corse, jadis prospère, couvrait ses collines, les flancs de ses vallées de terrasse de culture, les troupeaux nombreux montaient à l’estime mais trouvaient, l’hiver, dans les jachères laissées à leur disposition, une nourriture facile et abandonnée, les villages étaient vivants, gais, l’année durant, ce qu’ils ne sont plus maintenant que deux mois l’an. La Corse aussi, chantée pour son manteau de verdure abritait, encore, en nombre important, des espèces rares ou qui lui étaient propres. Mais cela était hier.
+                            Aujourd’hui ce tableau n’est plus la réalité, une lente dégradation, que l’on a trop souvent et trop longtemps cru inéluctable, a mené à la situation actuelle… Les cultures abandonnées, les terrasses se sont peu à peu couvertes de maquis. Les troupeaux livrés à ce maquis ne trouvent plus, en plaine, une nourriture suffisante. Les villages déjà dépeuplés par la guerre 1914-1918, se sont longtemps vidés de leurs forces vives, au profit du continent, des colonies. La Corse brûle. Cercle infernal, si on ne vient l’enrayer. Le maquis incendié, verra repousser des plantes xérophiles, facilement combustibles et brûlera beaucoup mieux. D’année en année, les risques d’incendie seront plus grands, les surfaces incendiées plus importantes…
+                            C’est ainsi qu’est née l’idée de Parc naturel régional - demandée par la Corse elle-même - politique volontariste d’aménagement et de sauvetage de l’intérieur de l’île. Parce que les hommes refusent de voir mourir le pays qu’ils aiment, parce que des hommes ont décidé de tendre leur volonté afin que la Corse demeure, afin que cesse l’hémorragie qui vide l’intérieur, parce que des hommes ont compris aujourd’hui, à une époque où l’espace devient de plus en plus précieux, où la civilisation devient de plus en plus agressive, que la vraie richesse de la Corse c’était son espace, son calme, sa sauvage grandeur, ses villages, ses bergers, sa montage, tout autant que la mer, les plages ou le soleil.
+                            Depuis plus de 45 ans, par sa politique forte et engagée, le Parc naturel régional de Corse a contribué à la protection du patrimoine insulaire, apparaissant comme l’un des pionniers du développement durable sur l’île.
+                        </p>
+                    </div>
+                    <div class="rectangleRight">
+                        <h1 style="text-align: center;">Recommandation</h1>
+                    </div>  
+                </div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="static\img\fond2.png" style="width:100%">
-            <div class="text">Caption Three</div>
+            <img src="static\img\fond2.jpg" style="width:100%">
+                <div class="text">
+                    <div class="rectangleLeft">
+                        <h1>Un projet de développement durable de territoire…</h1>
+                        <p>
+                            Les actions d’un PNR sont menées en fonction de sa charte, projet concerté de développement durable du territoire pour 15 ans (Loi Biodiversité d’Aout 2016). La charte fixe les objectifs à atteindre, les orientations de protection, de mise en valeur et de développement du Parc, ainsi que les mesures qui lui permettent de les mettre en œuvre. Elle permet également d’assurer la cohérence et la coordination des actions menées sur le territoire du parc par les diverses collectivités signataires sur les thématiques suivantes :
+                        </p>
+                        <li>Protection et gestion de l’environnement et du patrimoine</li>
+                        <li>Revitalisation de l’espace rural par un tourisme durable</li>
+                        <li>Revitalisation de l’espace rural par un tourisme durable</li>
+                        <li>Sensibilisation à l’environnement, accueil du public et communication</li>
+                        <li>La marque Valeurs Parc naturel régional</li>
+                    </div>
+                    <div class="rectangleRight">
+                        <h1 style="text-align: center;">Recommandation</h1>
+                    </div>  
+                </div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -176,11 +240,11 @@
 
     </div>
 
-    {# <div class="dot-container">
+     <div class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-    </div> #}
+    </div> 
 
     <script>
         let slideIndex = 1;
