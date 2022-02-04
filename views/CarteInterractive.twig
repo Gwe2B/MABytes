@@ -1,5 +1,77 @@
 {% extends "templates/base.twig" %}
 
 {% block mainContent %}
+    <style>
+/* Add styles to the form container */
+.container {
+  /* position: absolute; */
+  background-color:#c9beac;
+  width: 45%;
+  margin: 5px 0 22px 0;
+  padding: 16px 20px;
 
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+</style>
+    <div style="position: relative;">
+        <iframe style="position: relative;z-index: -25"src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d188736.463379647!2d8.95074!3d42.342369!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1643989201059!5m2!1sfr!2sfr" width="1920" height="895" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+        <div style="position: absolute; top:20px; right:10px; z-index: 99;">
+            <label class="container">Faune
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Flore
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Maritime
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Gastronomie
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Randonné
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Lieux
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
 {% endblock %}
