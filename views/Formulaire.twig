@@ -6,9 +6,10 @@
 .container {
   /* position: absolute; */
   background-color:#c9beac;
-  width: 45%;
+  /* width: 45%; */
   margin: 5px 0 22px 0;
   padding: 16px 20px;
+  border-radius: 10px;
 
 }
 
@@ -40,12 +41,21 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
+label{
+  color : white;
+}
+textarea{
+  border-radius: 5px;
+}
+input{
+  border-radius: 5px;
+}
 </style>
     <div style="position: relative;">
-        <iframe style="position: relative;z-index: -25"src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d188736.463379647!2d8.95074!3d42.342369!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1643989201059!5m2!1sfr!2sfr" width="1920" height="895" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
-        <div style="position: absolute; top:10px; right:10px; z-index: 99;">
-            <form action="/action_page.php" class="container">
-                <h1 style="text-align: center;">Formulaire / Recommandation</h1>
+        <iframe style="pointer-events: auto; position: relative;z-index: -25"src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d188736.463379647!2d8.95074!3d42.342369!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1643989201059!5m2!1sfr!2sfr" width="1920" height="895" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+        <div style="position: absolute; top:10px; right:10px; z-index:1; width:50%; height:80vh; ">
+            <form class="container">
+                <h1 style="text-align: center; color:white;">Formulaire / Recommandation</h1>
 
                 <label for="nom"><b>Nom</b></label>
                 <input type="text" placeholder="Entrez votre nom complet" name="nom" required>
@@ -54,13 +64,11 @@ input[type=text]:focus, input[type=password]:focus {
                 <input type="text" placeholder="Entrez la longitude" name="longitude">
                 <label for="laditude"><b>Latitude</b></label>
                 <input type="text" placeholder="Entrez la latitude" name="laditude">
-                <label for="information"><b>Information</b></label>
-                <input type="text" placeholder="Entrez toutes informations qui vous semble utile" name="information">
-                <label for="recommandation"><b>Recommandation</b></label>
-                <input type="text" placeholder="Entrez Vos recommandation pour les autres utilisateurs" name="recommandation" required>
-
-
-                <button type="submit" class="btn">Soumettre</button>
+                <label for="information"><b>Information</b></label></br>
+                <textarea type="text" placeholder="Entrez toutes informations qui vous semble utile" rows="3" cols="95" name="information"></textarea></br>
+                <label for="recommandation"><b>Recommandation</b></label></br>
+                <textarea type="text" placeholder="Entrez Vos recommandation pour les autres utilisateurs" name="recommandation" rows="3" cols="95" required></textarea>
+                <button type="submit" class="btn" style="border-radius: 5px; background:#92b474;">Soumettre</button>
             </form>
         </div>
     </div>
