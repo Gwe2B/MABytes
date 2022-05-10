@@ -9,9 +9,22 @@ namespace App\Router;
  * @version 1
  */
 class Router {
+    /**
+     * The requested URL
+     * @var string
+     */
     private $url;
+
+    /**
+     * The existing routes
+     * @var array[Route]
+     */
     private $routes = array();
 
+    /**
+     * Class constructor
+     * @param string $url The requested URL
+     */
     public function __construct(string $url) {
         $this->url = $url;
     }
@@ -38,22 +51,6 @@ class Router {
      */
     public function put(string $path, mixed $callable): Route {
         return $this->add($path, $callable, 'PUT');
-    }
-
-    /**
-     * Add a PATCH route
-     * @see self::add()
-     */
-    public function patch(string $path, mixed $callable): Route {
-        return $this->add($path, $callable, 'PATCH');
-    }
-
-    /**
-     * Add a DELETE route
-     * @see self::add()
-     */
-    public function delete(string $path, mixed $callable): Route {
-        return $this->add($path, $callable, 'DELETE');
     }
 
     /**

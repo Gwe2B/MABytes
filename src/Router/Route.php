@@ -3,11 +3,30 @@
 namespace App\Router;
 
 class Route {
+    /**
+     * The namespace where to found the controllers
+     * @var string
+     */
     const CONTROLLER_NAMESPACE = "App\\Controller\\";
+
+    /**
+     * Th suffixe of the controllers (Ex. UserController)
+     * @var string
+     */
     const CONTROLLER_SUFIXE = "Controller";
 
+    /**
+     * The route path
+     * @var string
+     */
     private $path;
+
+    /**
+     * The callback object
+     * @var string|callable
+     */
     private $callable;
+
     private $matches = array();
     private $params = array();
 

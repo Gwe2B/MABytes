@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_errors', 1); // DEV -> 1, PROD -> 0
 
 /* -------------------------- Constants definition -------------------------- */
@@ -31,4 +32,9 @@ $router->get('/accueil', 'Index#show');
 
 
 // Running the router
-$router->run();
+try {
+    $router->run();
+} catch(App\Router\RouterException $ex) {
+    echo $ex->getMessage();
+    die();
+}
