@@ -46,14 +46,6 @@ class Router {
     }
 
     /**
-     * Add a PUT route
-     * @see self::add()
-     */
-    public function put(string $path, mixed $callable): Route {
-        return $this->add($path, $callable, 'PUT');
-    }
-
-    /**
      * Add a route to the router
      * @param string $path The url of the route
      * @param string|callable $callable The action to be called
